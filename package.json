@@ -1,0 +1,36 @@
+{
+  "name": "lambda-integrator-extension",
+  "main": "./lib/lambda",
+  "version": "0.1.0",
+  "description": "Lambda based extension for Integrator.io",
+  "homepage": "https://integrator.io",
+  "author": "Celigo Inc. <developer@celigo.com> (http://www.celigo.com)",
+  "engines": {
+    "node": ">= 0.12"
+  },
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/celigo/lambda-integrator-extension.git"
+  },
+  "dependencies": {
+    "integrator-extension": "0.2.2"
+  },
+  "devDependencies": {
+    "mocha": "2.4.5",
+    "should": "8.3.0",
+    "winston": "2.2.0",
+    "lodash.isempty": "4.4.0"
+  },
+  "scripts": {
+    "test": "mocha --require ./test/common.js --reporter spec --recursive --timeout 45000 test"
+  },
+  "standard": {
+    "globals": [
+      "describe",
+      "it",
+      "before",
+      "after"
+    ]
+  }
+}
