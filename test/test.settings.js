@@ -21,7 +21,7 @@ describe('Lambda connector settings tests', function () {
       _integrationId: _integrationId
     }
 
-    testUtil.invokeFunction(options, extensionProperties, 'hooksWrappersTest', function (error, data) {
+    testUtil.invokeFunction(options, extensionProperties, 'installerSettingsTest', function (error, data) {
       if (error) return done(error)
 
       var expected = [{ code: 'Error', message: 'persistSettings' }]
@@ -43,7 +43,7 @@ describe('Lambda connector settings tests', function () {
       _integrationId: _integrationId
     }
 
-    testUtil.invokeFunction(options, extensionProperties, 'hooksWrappersTest', function (error, data) {
+    testUtil.invokeFunction(options, extensionProperties, 'installerSettingsTest', function (error, data) {
       if (error) return done(error)
 
       data.StatusCode.should.equal(200)
@@ -70,7 +70,7 @@ describe('Lambda connector settings tests', function () {
       _integrationId: _integrationId
     }
 
-    testUtil.invokeFunction(options, extensionProperties, 'hooksWrappersTest', function (error, data) {
+    testUtil.invokeFunction(options, extensionProperties, 'installerSettingsTest', function (error, data) {
       if (error) return done(error)
 
       data.StatusCode.should.equal(200)
