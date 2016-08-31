@@ -111,7 +111,7 @@ describe('Lambda function error handling tests', function () {
     })
 
     it('should return error when connectors doesn\'t exist but connectorId is set', function (done) {
-      invokeFunctionTest.options.diy = function () {}
+      invokeFunctionTest.options = {diy: function () {}}
 
       var options = {
 

@@ -14,7 +14,7 @@
     "url": "https://github.com/celigo/lambda-integrator-extension.git"
   },
   "dependencies": {
-    "integrator-extension": "0.3.0"
+    "integrator-extension": "0.3.1"
   },
   "devDependencies": {
     "mocha": "2.4.5",

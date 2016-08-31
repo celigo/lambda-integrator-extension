@@ -10,7 +10,8 @@ function AWS () {
         'us-east-1': {
           hooksWrappersTest: testFunctions.hooksWrappersTest,
           createHandlerTest: testFunctions.createHandlerTest,
-          invokeFunctionTest: testFunctions.invokeFunctionTest
+          invokeFunctionTest: testFunctions.invokeFunctionTest,
+          installerSettingsTest: testFunctions.installerSettingsTest
         }
       }
     }
