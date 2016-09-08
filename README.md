@@ -19,7 +19,7 @@ to be assigned to exports.handler which in turn will be executed whenever integr
 
 ### Getting Started
 
-Given below are the complete steps to create an working AWS Lambda stack.
+Given below are the complete steps to create a working AWS Lambda stack.
 
 1. Create an [AWS account](http://aws.amazon.com/). As part of the sign-up validation procedure you will receive a phone call.
 3. Create an IAM Policy
@@ -29,6 +29,7 @@ Given below are the complete steps to create an working AWS Lambda stack.
   4. On the "Create Policy" page, select "Create Your Own Policy" option.
   5. Give an appropriate name for the policy in name field.
   6. Add the following in the policy document text box:
+
 	```
     {
         "Version": "2012-10-17",
@@ -57,31 +58,31 @@ Given below are the complete steps to create an working AWS Lambda stack.
   1. Run "npm init" to create node project in a new folder
   2. Run "npm i --save lambda-integrator-extension"
   3. Create a new file functions.js and save the following extension functions in it.
-  ```
-      var obj = {
-        hooks: {
-          preSaveFunction: function (options, callback) {
-            // your code
-          }		  
-        },
+      ```js
+          var obj = {
+            hooks: {
+              preSaveFunction: function (options, callback) {
+                // your code
+              }		  
+            },
 
-        wrappers: {
-          pingFunction: function (options, callback) {
-            // your code
+            wrappers: {
+              pingFunction: function (options, callback) {
+                // your code
+              }
+            }
           }
-        }
-      }
 
-      module.exports = obj
-  ```
+          module.exports = obj
+      ```
   4. Create a new file index.js and save the following code in it. This shows options for DIY functions but connectors can also be set in options.
-  ```
-    var extension = require('lambda-integrator-extension');
-    var functions = require('./functions');
+      ```js
+        var extension = require('lambda-integrator-extension');
+        var functions = require('./functions');
 
-    var options = { diy: functions };
-    exports.handler = extension.createHandler(options);
-  ```
+        var options = { diy: functions };
+        exports.handler = extension.createHandler(options);
+      ```
   5. Create a zip of the project folder with an archiving utility. It should have package.json, index.js, functions.js and node_modules in it.
 5. Create a Lambda function on AWS
   1. Go to Lambda through Amazon web services dashboard.
