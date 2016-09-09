@@ -55,8 +55,8 @@ Given below are the complete steps to create a working AWS Lambda stack.
   6. Click on "Show User Security Credentials" and make a note of the "Access Key ID" and "Secret Access Key".
   7. Go to the Permissions tab for the user and attach the policy created above.
 4. Write code
-  1. Run "npm init" to create node project in a new folder
-  2. Run "npm i --save lambda-integrator-extension"
+  1. Run "npm init" to create node project in a new folder.
+  2. Run "npm i --save lambda-integrator-extension".
   3. Create a new file functions.js and save the following extension functions in it.
       ```js
           var obj = {
@@ -110,4 +110,4 @@ Given below are the complete steps to create a working AWS Lambda stack.
   7. Set the function name to the function name of the AWS Lambda function that was created.
   8. Click on the save button.
 
-Now, the stack is ready for use and it can be referenced from appropriate exports and imports. The steps above list out the bare minimum setup required to run an AWS Lambda stack. It is recommended that the permissions and other settings be customized as per your own requirements and controls.
+Now, the stack is ready for use and it can be referenced from appropriate exports, imports and connections. The steps above list out the bare minimum setup required to run an AWS Lambda stack. It is recommended that the permissions and other settings be customized as per your own requirements and controls.
