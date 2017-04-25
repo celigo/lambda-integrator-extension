@@ -37,7 +37,7 @@ Given below are the complete steps to create a working AWS Lambda stack.
   5. Give an appropriate name for the policy in name field.
   6. Add the following in the policy document text box:
 
-	```js
+	```javascript
     {
         "Version": "2012-10-17",
         "Statement": [{
@@ -65,7 +65,7 @@ Given below are the complete steps to create a working AWS Lambda stack.
   1. Run "npm init" to create node project in a new folder.
   2. Run "npm i --save lambda-integrator-extension".
   3. Create a new file functions.js and save the following [extension functions](https://github.com/celigo/integrator-extension#extension-functions) in it.
-      ```js
+      ```javascript
           var obj = {
             hooks: {
               preSaveFunction: function (options, callback) {
@@ -83,7 +83,7 @@ Given below are the complete steps to create a working AWS Lambda stack.
           module.exports = obj
       ```
   4. Create a new file index.js and save the following code in it. Either the DIY or connectors [configuration](https://github.com/celigo/integrator-extension#configuration) should be used.
-      ```js
+      ```javascript
         var extension = require('lambda-integrator-extension');
         var functions = require('./functions');
 
