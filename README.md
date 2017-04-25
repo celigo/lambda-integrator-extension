@@ -37,20 +37,20 @@ Given below are the complete steps to create a working AWS Lambda stack.
   5. Give an appropriate name for the policy in name field.
   6. Add the following in the policy document text box:
 
-	```javascript
-    {
-        "Version": "2012-10-17",
-        "Statement": [{
-            "Effect": "Allow",
-            "Action": [
-                "lambda:InvokeFunction"
-            ],
-            "Resource": [
-                "*"
-            ]
-        }]
-    }
-  ```
+	    ```
+      {
+          "Version": "2012-10-17",
+          "Statement": [{
+              "Effect": "Allow",
+              "Action": [
+                  "lambda:InvokeFunction"
+              ],
+              "Resource": [
+                  "*"
+              ]
+          }]
+      }
+      ```
   7. To validate the policy click on "Validate Policy" button.
   8. If the validation passes then click on "Create Policy" button.
 3. Create an [IAM User](http://docs.aws.amazon.com/IAM/latest/UserGuide/introduction.html) in AWS
