@@ -37,7 +37,7 @@ Given below are the complete steps to create a working AWS Lambda stack.
   5. Give an appropriate name for the policy in name field.
   6. Add the following in the policy document text box:
 
-	```
+	```js
     {
         "Version": "2012-10-17",
         "Statement": [{
