@@ -30,29 +30,29 @@ Given below are the complete steps to create a working AWS Lambda stack.
 
 1. Create an [AWS account](http://aws.amazon.com/). As part of the sign-up validation procedure you will receive a phone call.
 2. Create an [IAM Policy](http://docs.aws.amazon.com/IAM/latest/UserGuide/access_policies_managed-vs-inline.html?icmpid=docs_iam_console)
-  1. Go to Identity And Access Management page by clicking "Security Credentials" from the drop down under your account name.
-  2. On the navigation column on the left, choose "Policies".
-  3. Click the "Create Policy" button present at the top of the page.
-  4. On the "Create Policy" page, select "Create Your Own Policy" option.
-  5. Give an appropriate name for the policy in name field.
-  6. Add the following in the policy document text box:
+    1. Go to Identity And Access Management page by clicking "Security Credentials" from the drop down under your account name.
+    2. On the navigation column on the left, choose "Policies".
+    3. Click the "Create Policy" button present at the top of the page.
+    4. On the "Create Policy" page, select "Create Your Own Policy" option.
+    5. Give an appropriate name for the policy in name field.
+    6. Add the following in the policy document text box:
 
-	    ```
-      {
-          "Version": "2012-10-17",
-          "Statement": [{
-              "Effect": "Allow",
-              "Action": [
-                  "lambda:InvokeFunction"
-              ],
-              "Resource": [
-                  "*"
-              ]
-          }]
-      }
-      ```
-  7. To validate the policy click on "Validate Policy" button.
-  8. If the validation passes then click on "Create Policy" button.
+  	    ```
+        {
+            "Version": "2012-10-17",
+            "Statement": [{
+                "Effect": "Allow",
+                "Action": [
+                    "lambda:InvokeFunction"
+                ],
+                "Resource": [
+                    "*"
+                ]
+            }]
+        }
+        ```
+    7. To validate the policy click on "Validate Policy" button.
+    8. If the validation passes then click on "Create Policy" button.
 3. Create an [IAM User](http://docs.aws.amazon.com/IAM/latest/UserGuide/introduction.html) in AWS
   1. Go to Identity And Access Management page.
   2. Select "Users" in the left pane.
