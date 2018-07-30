@@ -70,7 +70,7 @@ Given below are the complete steps to create a working AWS Lambda stack.
           hooks: {
             preSaveFunction: function (options, callback) {
               // your code
-            }		  
+            }
           },
 
           wrappers: {
@@ -98,7 +98,7 @@ Given below are the complete steps to create a working AWS Lambda stack.
     3. On the select blueprint page click on skip button.
     4. Click on next button on configure triggers page.
     5. Provide a name for the function.
-    6. Select runtime environment as Node.js 4.3.
+    6. Select runtime environment as Node.js 8.10.
     7. In the Lambda function code section select code entry type as Upload a .ZIP file.
     8. Click on the upload button to upload the zip file that was created earlier.
     9. Set handler to 'index.handler'.
