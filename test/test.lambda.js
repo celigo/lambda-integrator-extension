@@ -7,30 +7,6 @@ var invokeFunctionTest = require('./lambda-test-functions').invokeFunctionTest
 var bearerToken = 'ott873f2beed978433997c42b4e5af05d9b'
 
 describe('Lambda function error handling tests', function () {
-  it('should return error when extension properties doesn\'t have type field set', function (done) {
-    var extensionProperties = {
-      diy: true,
-      function: 'doSomething'
-    }
-
-    var options = {
-      key1: [ 'abc' ],
-      key2: { k: 'v' },
-      _importId: '56eae39e9a016a71a8a9c7e4',
-      bearerToken: bearerToken
-    }
-
-    testUtil.invokeFunction(options, extensionProperties, 'hooksWrappersTest', function (error, data) {
-      if (error) return done(error)
-
-      var expected = [{
-        code: 'missing_required_field',
-        message: 'Missing required field type in the extension options.'
-      }]
-      testUtil.validateErrorRetured(data, expected, done)
-    })
-  })
-
   it('should return error when extension properties doesn\'t have function field set', function (done) {
     var extensionProperties = {
       diy: true,
